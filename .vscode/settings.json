@@ -1,0 +1,13 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.configPath": "./starter/.prettierrc",
+    "prettier.prettierPath": "./starter/node_modules/prettier",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    },
+    "typescript.tsdk": "./starter/node_modules/typescript/lib",
+    "eslint.validate": ["javascript", "typescript", "html"],
+    "eslint.workingDirectories": [{ "mode": "auto" }]
+  }
+  
