@@ -1,3 +1,27 @@
 <div class="relative grid grid-cols-1">
   <div #mapContainer class="h-full w-full min-h-96"></div>
 </div>
+<div>
+  <label for="dataset">Select Data Set &nbsp;</label>
+  <select id="dataset" [(ngModel)]="selectedGeojson" (change)="onGeojsonChange()">
+    <option *ngFor="let option of geojsonOptions" [value]="option.value">
+      {{ option.name }}
+    </option>
+  </select>
+</div>
+<div>
+  <label for="type">Geometry type &nbsp;</label>
+  <select id="type" [(ngModel)]="selectedType" (change)="drawGeometry()" >
+    <option *ngFor="let option of typeOptions" [value]="option.value">
+      {{ option.name }}
+    </option>
+  </select>
+</div>
+
+<button (click)="exportMapData()">Export Map as PNG</button>
+<a id="image-download" download="map.png"></a>
+
+<p>
+  This is just the basic usage of OpenLayers Functionality. Like importing data and interacting with map along with export as PNG functionality.
+</p>
+
